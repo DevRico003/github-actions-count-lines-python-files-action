@@ -1,8 +1,9 @@
 import os
+import sys
 
-def count_lines():
+def count_lines(directory):
     total_lines = 0
-    for root, dirs, files in os.walk("."):
+    for root, dirs, files in os.walk(directory):
         for file in files:
             if file.endswith(".py"):
                 with open(os.path.join(root, file)) as f:
@@ -10,4 +11,5 @@ def count_lines():
     return total_lines
 
 if __name__ == "__main__":
-    print(f"Total lines in Python files: {count_lines()}")
+    directory = sys.argv[1]
+    print(f"Total lines in Python files: {count_lines(directory)}")
