@@ -1,28 +1,19 @@
-name: Node.js application test
+name: Python application test
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build_and_test:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-    - name: Install dependencies
-      run: |
-        npm install
-    - name: Run tests
-      run: |
-        npm test
-    - name: Run index.js
-      run: |
-        node index.js
+      - uses: actions/checkout@v2
+      - name: Count lines in Python files
+        uses: ./.github/actions/count-lines
 
-        
+
+
+
+

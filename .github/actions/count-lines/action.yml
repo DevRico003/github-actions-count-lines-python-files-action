@@ -1,0 +1,5 @@
+name: 'Count lines in Python files'
+description: 'Counts the number of lines in all Python files in the repository'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
