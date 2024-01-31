@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build_and_test:
 
     runs-on: ubuntu-latest
 
@@ -24,3 +24,5 @@ jobs:
     - name: Run index.js
       run: |
         node index.js
+
+        
