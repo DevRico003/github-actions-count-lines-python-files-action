@@ -13,7 +13,8 @@ jobs:
       - name: Count lines in Python files
         uses: ./.github/actions/count-lines
         with:
-          directory: '/test'
+          directory: ${{ github.workspace }}/test
+      
 
 
 
